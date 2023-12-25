@@ -1,5 +1,5 @@
-// los angeles
-function losAngeles() {
+function updateTime() {
+  // Los Angeles
   let losAngelesElement = document.querySelector("#los-angeles");
   if (losAngelesElement) {
     let losAngelesDateElement = losAngelesElement.querySelector(".date");
@@ -8,6 +8,45 @@ function losAngeles() {
 
     losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do, YYYY");
     losAngelesTimeElement.innerHTML = losAngelesTime.format(
+      "hh:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  // Sydney
+  let sydneyElement = document.querySelector("#sydney");
+  if (sydneyElement) {
+    let sydneyDateElement = sydneyElement.querySelector(".date");
+    let sydneyTimeElement = sydneyElement.querySelector(".time");
+    let sydneyTime = moment().tz("Australia/Sydney");
+
+    sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do, YYYY");
+    sydneyTimeElement.innerHTML = sydneyTime.format(
+      "hh:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  // Buenos Aires
+  let bairesElement = document.querySelector("#buenos-aires");
+  if (bairesElement) {
+    let bairesDateElement = bairesElement.querySelector(".date");
+    let bairesTimeElement = bairesElement.querySelector(".time");
+    let bairesTime = moment().tz("America/Buenos_Aires");
+
+    bairesDateElement.innerHTML = bairesTime.format("MMMM Do, YYYY");
+    bairesTimeElement.innerHTML = bairesTime.format(
+      "hh:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  // Caracas
+  let caracasElement = document.querySelector("#caracas");
+  if (caracasElement) {
+    let caracasDateElement = caracasElement.querySelector(".date");
+    let caracasTimeElement = caracasElement.querySelector(".time");
+    let caracasTime = moment().tz("America/Caracas");
+
+    caracasDateElement.innerHTML = caracasTime.format("MMMM Do, YYYY");
+    caracasTimeElement.innerHTML = caracasTime.format(
       "hh:mm:ss [<small>]A[</small>]"
     );
   }
@@ -36,8 +75,8 @@ function updateCity(event) {
 `;
 }
 
-losAngeles();
-setInterval(losAngeles, 1000);
+updateTime();
+setInterval(updateTime, 1000);
 
 let citySelectElement = document.querySelector("#city");
 citySelectElement.addEventListener("change", updateCity);
