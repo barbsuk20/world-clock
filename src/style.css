@@ -1,0 +1,65 @@
+body {
+  background: #f9f7fe;
+  font-family: "Playfair Display", serif;
+}
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0 0 5px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 0;
+  border-bottom: 1px dashed grey;
+  padding: 20px 0;
+}
+.city:last-child {
+  border: none;
+}
+
+.time {
+  font-size: 48px;
+  font-weight: bold;
+}
+.time small {
+  font-size: 24px;
+  vertical-align: middle;
+  line-height: 36px;
+}
+
+.date {
+  opacity: 0.7;
+  margin: 0 auto;
+}
+
+footer {
+  opacity: 0.8;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+}
