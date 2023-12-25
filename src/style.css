@@ -63,3 +63,16 @@ footer {
   font-size: 12px;
   margin-top: 20px;
 }
+
+#back {
+  background-color: #f65282;
+  text-decoration: none;
+  color: #f9f7fe;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+a {
+  color: #f65282;
+  text-decoration: none;
+}
